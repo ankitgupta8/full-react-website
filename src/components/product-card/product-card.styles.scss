@@ -1,0 +1,94 @@
+$primary: #FF606F;
+$heading-font: #1D252C;
+$body-font: #676767;
+$poppin-font: 'poppins',
+'sans-serif';
+$primary2: #FF5564;
+.product-card {
+    transform-style: preserve-3d;
+    border-radius: 83px;
+    height: 255px;
+    width: 331px;
+    position: relative;
+    text-align: start;
+    h4 {
+        position: absolute;
+        left: 5%;
+        font-family: $poppin-font;
+        color: white;
+    }
+    img {
+        position: absolute;
+        transform: translate3d(0, 0, 50px);
+        left: 30%;
+    }
+    h4 {
+        font-size: 40px;
+        position: absolute;
+        top: 50px;
+    }
+    .shopNow {
+        position: absolute;
+        background-color: $primary2;
+        padding: 5px 10px;
+        border-radius: 20px;
+        bottom: 20%;
+        left: 10%;
+        font-size: 20px;
+        box-shadow: 0px 5px 10px rgba(231, 42, 42, 0.55);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.4s ease;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        z-index: 200;
+    }
+    &:hover .shopNow {
+        cursor: pointer;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .shopNow:active {
+        transform: scale(0.9);
+    }
+    &::before {
+        content: 'SHOP NOW';
+        position: absolute;
+        top: 40%;
+        left: -20%;
+        font-size: 3rem;
+        font-family: $poppin-font;
+        color: #fff;
+        opacity: 0;
+        transition: all 0.4s ease;
+        overflow: hidden;
+    }
+    &:hover.product-card::before {
+        opacity: 0.5;
+        left: 0%;
+    }
+    .men {
+        img {
+            top: -50%;
+        }
+    }
+    .women {
+        img {
+            left: 60%;
+            top: -35%;
+        }
+    }
+}
+
+@media (max-width:909px) {
+    body,
+    html {
+        font-size: 80%;
+    }
+    .nav-section {
+        .nav-items {
+            display: none;
+        }
+    }
+}

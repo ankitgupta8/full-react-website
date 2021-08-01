@@ -1,0 +1,54 @@
+.text-box {
+    position: relative;
+    margin-top: 50px;
+    #showHide {
+        position: absolute;
+        right: 45px;
+        top: 18px;
+        font-size: 25px;
+        color: #FF6B7B;
+        cursor: pointer;
+    }
+}
+
+.text-box input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.822);
+    outline: none;
+    margin: 20px;
+    font-size: 16px;
+    font-family: 'poppins';
+    transition: 0.4s ease;
+    color: rgb(59, 59, 59);
+    width: 310px;
+}
+
+.text-box label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    pointer-events: none;
+    font-family: 'poppins';
+    transition: 0.3s ease;
+    color: #424242c9;
+    font-size: 14px;
+    font-weight: 100;
+    width: 200px;
+}
+
+.text-box input:valid~label,
+.text-box input:focus~label {
+    top: 8px;
+    left: 20px;
+    font-size: 10px;
+    color: #FF6B7B;
+}
+
+.text-box input:focus,
+.text-box input:valid {
+    border-bottom: 1px solid #FF6B7B;
+}

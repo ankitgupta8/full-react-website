@@ -1,0 +1,119 @@
+$primary: #FF606F;
+$heading-font: #1D252C;
+$body-font: #676767;
+$poppin-font: 'poppins',
+'sans-serif';
+$primary2: #FF5564;
+.nav-section {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    img {
+        width: 87px;
+        height: 72px;
+    }
+    .nav-items {
+        display: flex;
+        width: 20rem;
+        justify-content: space-around;
+        li {
+            list-style: none;
+        }
+        li:nth-of-type(2),
+        li:nth-of-type(3) {
+            font-family: $poppin-font;
+            cursor: pointer;
+            padding: 3px 20px;
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                border: none;
+                outline: none;
+                background-color: #fff;
+                color: #1D252C;
+                text-transform: uppercase;
+                &:hover {
+                    cursor: pointer;
+                    color: $primary;
+                }
+            }
+        }
+        a {
+            text-decoration: none;
+            font-family: $poppin-font;
+            border: none;
+            transition: 0.5s ease;
+            &.active {
+                font-size: 16px;
+                background-color: $primary;
+                border-top-left-radius: 9px;
+                border-top-right-radius: 9px;
+                border-bottom-right-radius: 9px;
+                padding: 3px 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: white;
+            }
+            &:hover {
+                cursor: pointer;
+                filter: brightness(150%);
+            }
+        }
+    }
+    .cart {
+        font-size: 1.8rem;
+        color: #1D252C;
+        display: flex;
+        justify-content: space-between;
+        width: 5rem;
+        cursor: pointer;
+        position: relative;
+        #user-icon {
+            .user-log {
+                position: absolute;
+                color: #1D252C;
+                background-color: #fff;
+                box-shadow: 5px 5px 10px #1d252c1c, -5px -5px 10px #1d252c1c;
+                width: 200px;
+                left: -80px;
+                padding: 20px;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                transform: translateY(-20px);
+                .signbtn {
+                    margin: auto;
+                    padding: 10px 10px;
+                    background-color: #FF5564;
+                    color: #fff;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    font-size: 16px;
+                    font-family: $poppin-font;
+                    border: 1px solid $primary2;
+                    transition: all 0.4s ease;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #fff;
+                        color: $primary;
+                        border: 1px solid $primary2;
+                    }
+                }
+            }
+            &:hover {
+                color: #FF5564;
+            }
+        }
+        #user-icon:hover {
+            .user-log {
+                transform: translateY(0);
+                pointer-events: visible;
+                opacity: 1;
+            }
+        }
+    }
+}

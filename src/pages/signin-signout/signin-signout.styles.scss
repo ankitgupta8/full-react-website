@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@500&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login {
+    display: flex;
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-sign {
+    flex: 1 1 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 70vh;
+    margin: auto;
+}
+
+.right-sign {
+    flex: 1 1 400px;
+    margin: auto;
+    .card {
+        width: 400px;
+        height: 507px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 62px rgba(130, 130, 130, 0.25);
+        border-radius: 23px;
+        position: relative;
+        .btn-container {
+            position: relative;
+            left: 40px;
+            top: 65px;
+            width: 166px;
+            height: 40px;
+            background: rgba(245, 120, 165, 0.44);
+            border-radius: 18.5px;
+            .bg {
+                position: absolute;
+                width: 82px;
+                height: 30px;
+                background: #FF6B7B;
+                border-radius: 18.5px;
+                border: none;
+                left: 6px;
+                top: 5px;
+                transition: all 0.3s ease;
+            }
+            .signup,
+            .signin {
+                position: absolute;
+                background: transparent;
+                border: none;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                text-align: center;
+                color: #FFFFFF;
+                z-index: 10;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+            .signup {
+                right: 17px;
+                top: 8px;
+                color: #424242c9;
+            }
+            .signin {
+                left: 20px;
+                top: 8px;
+                color: rgba(255, 255, 255, 0.904);
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .login {
+        display: block;
+    }
+    .left-sign {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        opacity: 0.5;
+    }
+    .right-sign {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .card {
+            background: #ffffff8a;
+        }
+    }
+}

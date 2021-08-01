@@ -1,0 +1,92 @@
+$primary: #FF606F;
+$heading-font: #1D252C;
+$body-font: #676767;
+$poppin-font: 'poppins',
+'sans-serif';
+$primary2: #FF5564;
+.item {
+    position: relative;
+    flex: 1 1 400px;
+    .container {
+        margin: auto;
+        margin-top: 3rem;
+        .out {
+            width: 139px;
+            height: 40px;
+            background: rgb(255, 255, 255);
+            bottom: 60px;
+            left: 80px;
+            display: inline-block;
+            position: absolute;
+            z-index: 20;
+            opacity: 0;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            pointer-events: none;
+            transition: 0.3s ease;
+            font-size: 15px;
+            font-family: $poppin-font;
+            font-weight: 600;
+            color: $primary2;
+        }
+        .out:hover {
+            background-color: $primary2;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        .out:active {
+            transform: scale(0.9);
+        }
+        border: 5px solid #FF6B7B;
+        box-sizing: border-box;
+        box-shadow: 4px 3px 20px 0.5px #FF929E;
+        border-radius: 40px 0px 0px 0px;
+        width: 314px;
+        height: 505px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 455px;
+            width: 306px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(255, 107, 123, 0.83) 100%);
+            border-radius: 29px 0px 55px;
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
+        .image {
+            border-top-left-radius: 35px;
+            border-bottom-right-radius: 55px;
+            width: 306px;
+            height: 455px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .desc {
+            display: flex;
+            margin-top: 5px;
+            margin-left: 15px;
+            width: 270px;
+            justify-content: space-between;
+            .name {
+                font-weight: 600;
+            }
+            .price {
+                color: $primary;
+                font-weight: 500;
+            }
+            h3 {
+                font-family: $poppin-font;
+                font-size: 18px;
+            }
+        }
+    }
+    .container:hover.container::after {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
